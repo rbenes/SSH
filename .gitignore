@@ -1,0 +1,3 @@
+*.pyc
+bbox.c
+cython_bbox.so

@@ -1,0 +1,14 @@
+version: "2.3"
+
+services:
+  ssh:
+    build:
+      context: ../.
+      dockerfile: docker/Dockerfile
+    image: ssh
+    container_name: ssh_container
+    volumes:
+      - /mnt:/mnt
+      - ../.:/workspace/
+    command: /bin/bash
+    runtime: nvidia
